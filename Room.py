@@ -10,6 +10,7 @@ class Room:
     #TODO entities: EntityList
     #TODO items: ItemList
     #? descriptions: DiscriptionList
+    # some notes
 
 
     def __init__(self, name = None, north = None, south = None, east = None, west = None, lightLevel = 0):
