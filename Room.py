@@ -1,3 +1,4 @@
+from Item_and_Subclasses import Item
 class Room:
 
     north: 'Room'
@@ -5,15 +6,15 @@ class Room:
     east: 'Room'
     west: 'Room'
     name: str
-    lightLevel: int
+    lightLevel: str
 
     #TODO entities: EntityList
-    #TODO items: ItemList
-    #? descriptions: DiscriptionList
-    # need to finish these items soon
+    #ItemList: Item[]
+    # roomDescriptions: a dictionary with descriptions for the 3 light levels
 
 
-    def __init__(self, name = None, north = None, south = None, east = None, west = None, lightLevel = 0):
+    def __init__(self, roomDescriptions, name = None, north = None, south = None, east = None, west = None, lightLevel = None):
+        self.roomDescriptions = roomDescriptions
         self.name = name
         self.north = north
         self.south = south
