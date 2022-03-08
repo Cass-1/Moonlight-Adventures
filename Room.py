@@ -8,13 +8,14 @@ class Room:
     name: str
     lightLevel: str
 
-    #TODO entities: EntityList
+    #// TODO entities: EntityList
     #ItemList: Item[]
     # roomDescriptions: a dictionary with descriptions for the 3 light levels
 
 
-    def __init__(self, roomDescriptions, name = None, north = None, south = None, east = None, west = None, lightLevel = None):
+    def __init__(self, roomDescriptions, EntityList, name = None, north = None, south = None, east = None, west = None, lightLevel = None):
         self.roomDescriptions = roomDescriptions
+        self.EntityList = EntityList
         self.name = name
         self.north = north
         self.south = south
