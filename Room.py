@@ -45,5 +45,12 @@ class Room:
         else:
             west.east = self
 
-
+    #Returns the room that is in the direction the player chose
+    def go_direction(self, direction):
+        direction = direction.lower()
+        validDirections = ["north", "south", "east", "west"]
+        if direction in validDirections:
+            return getattr(self, direction)
+        else:
+            return None
     
